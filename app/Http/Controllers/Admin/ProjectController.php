@@ -15,8 +15,10 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
-        //
+        $projects = Project::all();
+        return view(('admin.project.index'), compact("projects"));
     }
 
     /**

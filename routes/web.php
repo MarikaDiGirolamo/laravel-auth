@@ -31,7 +31,7 @@ Route::middleware(['auth'])
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
         Route::resource('projects', ProjectController::class)->parameters([
-            'posts' => 'post:slug',
+            'projects' => 'project:slug',
         ]);
     });
 
